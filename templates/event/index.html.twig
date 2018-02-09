@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Events{% endblock %}
+
+{% block body %}
+    <ol>
+    {% for event in events %}
+        <li>{{ event.date|date('Y-m-d H:i:s') }}: {{ event.type }}</li>
+    {% endfor %}
+    </ol>
+{% endblock %}
